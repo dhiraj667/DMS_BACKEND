@@ -11,9 +11,9 @@ export const mongodb = (app) => {
     serverApi: {
       version: ServerApiVersion.v1,
       strict: true,
-      deprecationErrors: true,
-      useNewUrlParser: true
-    }
+      deprecationErrors: true
+    },
+    useNewUrlParser: true
   })
     .then((client) => client.db('DMS'))
     .catch((err) => {
