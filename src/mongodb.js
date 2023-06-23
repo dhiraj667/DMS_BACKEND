@@ -3,7 +3,7 @@ import { MongoClient, ServerApiVersion } from 'mongodb'
 
 export const mongodb = (app) => {
   // const connection = app.get('mongodb')
-  const connection = process.env.DATABASE
+  const connection = process.env.DATABASE || app.get('mongodb')
   // const database = new URL(connection).pathname.substring(1)
   // const connection =
   //   ''

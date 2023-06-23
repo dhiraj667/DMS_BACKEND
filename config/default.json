@@ -9,7 +9,7 @@
     "default": 10,
     "max": 10
   },
-
+ "mongodb": "mongodb+srv://dhirajshinde375:DhirajShinde@dmsdatabase.vrwsnpz.mongodb.net/?retryWrites=true&w=majority",
   "authentication": {
     "entity": "user",
     "service": "users",
