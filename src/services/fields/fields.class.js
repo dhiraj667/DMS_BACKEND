@@ -6,6 +6,11 @@ export class FieldsService extends MongoDBService {}
 export const getOptions = (app) => {
   return {
     paginate: app.get('paginate'),
-    Model: app.get('mongodbClient').then((db) => db.collection('fields'))
+    Model: app
+      .get('mongodbClient')
+      .then((db) => db.collection('fields'))
+      .catch((err) => {
+        console.log(err.message)
+      })
   }
 }

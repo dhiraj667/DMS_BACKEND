@@ -6,6 +6,11 @@ export class DoctypefieldsService extends MongoDBService {}
 export const getOptions = (app) => {
   return {
     paginate: app.get('paginate'),
-    Model: app.get('mongodbClient').then((db) => db.collection('doctypefields'))
+    Model: app
+      .get('mongodbClient')
+      .then((db) => db.collection('doctypefields'))
+      .catch((err) => {
+        console.log(err.message)
+      })
   }
 }

@@ -6,6 +6,11 @@ export class DocumentsService extends MongoDBService {}
 export const getOptions = (app) => {
   return {
     paginate: app.get('paginate'),
-    Model: app.get('mongodbClient').then((db) => db.collection('documents'))
+    Model: app
+      .get('mongodbClient')
+      .then((db) => db.collection('documents'))
+      .catch((err) => {
+        console.log(err.message)
+      })
   }
 }
