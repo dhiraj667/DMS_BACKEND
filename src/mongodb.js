@@ -2,10 +2,10 @@
 import { MongoClient, ServerApiVersion } from 'mongodb'
 
 export const mongodb = (app) => {
-  // const connection = app.get('mongodb')
+  const connection = app.get('mongodb')
   // const database = new URL(connection).pathname.substring(1)
-  const connection =
-    'mongodb+srv://dhirajshinde375:DhirajShinde@dmsdatabase.vrwsnpz.mongodb.net/?retryWrites=true&w=majority'
+  // const connection =
+  //   ''
   const mongoClient = MongoClient.connect(connection, {
     serverApi: {
       version: ServerApiVersion.v1,
