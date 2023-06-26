@@ -33,7 +33,7 @@ export const doctypes = (app) => {
   app.service(doctypesPath).hooks({
     around: {
       all: [
-        // authenticate('jwt'),
+        authenticate('jwt'),
         schemaHooks.resolveExternal(doctypesExternalResolver),
         schemaHooks.resolveResult(doctypesResolver)
       ]
