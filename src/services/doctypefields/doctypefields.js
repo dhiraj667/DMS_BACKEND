@@ -38,7 +38,7 @@ export const doctypefields = (app) => {
   app.service(doctypefieldsPath).hooks({
     around: {
       all: [
-        authenticate('jwt'),
+        // authenticate('jwt'),
         schemaHooks.resolveExternal(doctypefieldsExternalResolver),
         schemaHooks.resolveResult(doctypefieldsResolver)
       ]

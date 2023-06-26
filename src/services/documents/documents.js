@@ -61,7 +61,7 @@ export const documents = (app) => {
   app.service(documentsPath).hooks({
     around: {
       all: [
-        authenticate('jwt'),
+        // authenticate('jwt'),
         schemaHooks.resolveExternal(documentsExternalResolver),
         schemaHooks.resolveResult(documentsResolver)
       ]

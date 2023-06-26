@@ -33,7 +33,7 @@ export const fields = (app) => {
   app.service(fieldsPath).hooks({
     around: {
       all: [
-        authenticate('jwt'),
+        // authenticate('jwt'),
         schemaHooks.resolveExternal(fieldsExternalResolver),
         schemaHooks.resolveResult(fieldsResolver)
       ]

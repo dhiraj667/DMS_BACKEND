@@ -46,7 +46,7 @@ export const departments = (app) => {
       find: [],
       get: [],
       create: [
-        authenticate('jwt'),
+        // authenticate('jwt'),
         validate.form(departmentsSchema, { abortEarly: false }),
         schemaHooks.validateData(departmentsDataValidator),
         schemaHooks.resolveData(departmentsDataResolver)
